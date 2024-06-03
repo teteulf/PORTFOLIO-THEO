@@ -7,10 +7,10 @@ import ParticlesComponent from "./components/particles";
 export default function Home() {
   return (
     <>
-      <main className="relative h-screen w-full flex items-center justify-center text-white">
-        <ParticlesComponent />
-        <section className="flex items-center justify-center">
-          <div className="flex flex-col w-[390px] items-center justify-center">
+      <main className="relative h-full w-full flex items-center justify-center text-white">
+        <ParticlesComponent id="particles" />
+        <section className="flex items-center justify-center mt-[5%] xl:-ml-[38%]">
+          <div className="flex flex-col w-[390px] text-center xl:text-left">
             <h1 className="text-[40px]">
               Transforming ideas into
               <strong className="text-red-600"> Digital reality</strong>
@@ -32,6 +32,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div className="fixed bottom-0 right-[4%] invisible xl:visible">
+          <Image
+            src={"/i.png"}
+            width={600}
+            height={600}
+            alt="Apresentation image"
+            className="h-auto w-auto "
+          />
+        </div>
       </main>
     </>
   );

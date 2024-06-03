@@ -3,6 +3,7 @@ import "./globals.css";
 import HeaderLayout from "./header";
 import Menu from "./menu";
 import TopLeftImg from "./components/topLeftImg";
+import BottomRightImg from "./components/bottomRightImg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} h-full w-full`}>
         <HeaderLayout />
         <TopLeftImg />
+        <BottomRightImg />
         <Menu />
         {children}
       </body>
