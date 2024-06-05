@@ -14,10 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="pt-br"
-      className="bg-[#000014] bg-cover bg-no-repeat overflow-hidden h-full w-full"
-    >
+    <html lang="pt-br" className="bg-[#0c0c20]">
       <head></head>
       <body className={`${inter.className} h-full w-full`}>
         <HeaderLayout />

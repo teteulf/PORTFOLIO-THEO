@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BottomRightImg() {
   return (
-    <div className="absolute mix-blend-color-dodge animate-pulse duration-75 z-10 -right-16 -bottom-2">
+    <div className="fixed mix-blend-color-dodge animate-pulse opacity-2 duration-75 -z-10 bottom-0 right-0">
       <Image
         src={"/circles.jpeg.webp"}
         width={1000}

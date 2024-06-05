@@ -6,7 +6,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 export default function HeaderLayout() {
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 flex flex-col xl:flex-row justify-center items-center gap-[35%] z-10">
+      <div className="fixed top-0 left-0 right-0 flex flex-col max-w-[100vw] xl:flex-row justify-center items-center gap-[35%] z-10">
         <div className="text-[40px] text-gray-200">
           <strong className="font-bold">theo </strong> lefevre
           <strong className="text-red-600">.</strong>
