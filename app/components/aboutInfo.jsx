@@ -29,7 +29,7 @@ export function AboutInfo() {
   return (
     <>
       <div>
-        <div className="flex items-center justify-center text-[18px] gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-center text-[18px] gap-4">
           <div className="opacity-50">Web development -</div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-4">
