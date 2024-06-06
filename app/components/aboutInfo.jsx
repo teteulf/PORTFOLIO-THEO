@@ -12,14 +12,14 @@ const iconsData = [
   { icon: <IoLogoCss3 size={25} />, popUp: "Css" },
   { icon: <FaHtml5 size={25} />, popUp: "Html" },
   { icon: <IoLogoReact size={25} />, popUp: "React , ReactNative" },
-  { icon: <SiTailwindcss size={25} />, popUp: "TailWindCss" },
-  { icon: <SiStyledcomponents size={25} />, popUp: "SyledComponents" },
+  { icon: <SiTailwindcss size={25} />, popUp: "TailwindCss" },
+  { icon: <SiStyledcomponents size={25} />, popUp: "StyledComponents" },
   { icon: <FaGithub size={25} />, popUp: "GitHub" },
   { icon: <FaGitAlt size={25} />, popUp: "Git" },
   { icon: <FaNodeJs size={25} />, popUp: "NodeJs" },
   { icon: <SiFramer size={25} />, popUp: "Framer-motion" },
   { icon: <RiNextjsFill size={25} />, popUp: "NextJs" },
-  { icon: <BiLogoTypescript size={25} />, popUp: "typeScript" },
+  { icon: <BiLogoTypescript size={25} />, popUp: "TypeScript" },
 ];
 
 export function AboutInfo() {
@@ -67,7 +67,7 @@ export function AboutInfo() {
                   <div
                     className={`${
                       itemIndex + 6 === index ? "visible" : "hidden"
-                    } absolute bg-white text-black mt-20 rounded-[4px] px-2 opacity-60`}
+                    } absolute bg-white text-black mt-16 rounded-[4px] px-2 opacity-60`}
                     style={{ whiteSpace: "nowrap" }}
                   >
                     {item.popUp}

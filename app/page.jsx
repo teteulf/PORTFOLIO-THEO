@@ -24,7 +24,12 @@ export default function Home() {
 
             <div className="relative flex items-center justify-center ">
               <div className="animate-spin-slow min-w-[150px]">
-                <Image src={"/projects.png"} width={150} height={150} />
+                <Image
+                  src={"/projects.png"}
+                  width={150}
+                  height={150}
+                  alt="project link"
+                />
               </div>
               <div className="absolute hover:translate-x-4 transition duration-1000 cursor-pointer min-w-[35px]">
                 <FaArrowRightLong color="red" size={35} />
