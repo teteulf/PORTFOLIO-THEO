@@ -8,7 +8,7 @@ export default function BottomRightImg() {
         width={1000}
         height={1000}
         className="w-full h-full "
-        alt="splash image on top"
+        alt="splash image on bottom"
       ></Image>
     </div>
   );

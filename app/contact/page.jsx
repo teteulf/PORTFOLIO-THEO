@@ -20,6 +20,7 @@ export default function Contact() {
         (response) => {
           console.log("Email Enviado", response.status, response.text);
           e.target.reset();
+          alert("email sent succesfully");
         },
         (err) => {
           console.log("ERROR", err);
@@ -42,16 +43,16 @@ export default function Contact() {
             <input
               className="border-[1px] pl-[10px] rounded-[8px] border-solid border-slate-500 border-opacity-70 focus:border-red-600 transition-color duration-500 w-full h-[35px]"
               type="text"
-              id="from_name"
-              name="name"
+              id="to_name"
+              name="to_name"
               placeholder="Name"
               required
             ></input>
             <input
               className="border-[1px] pl-[10px] rounded-[8px] border-solid border-slate-500 border-opacity-70 focus:border-red-600 transition-color duration-500 w-full h-[35px]"
               type="email"
-              name="email"
-              id="from_email"
+              name="from_name"
+              id="from_name"
               placeholder="Email"
               required
             ></input>

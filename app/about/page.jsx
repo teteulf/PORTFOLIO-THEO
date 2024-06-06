@@ -79,7 +79,7 @@ export default function About() {
         <div className="flex text-white relative min-h-[150px] xl:min-w-[300px] ">
           {aboutData[index].info}
         </div>
-        <a className="hidden md:flex xl:flex-start w-[400px] items-center justify-center text-[20px] text-gray-400 cursor-pointer hover:text-gray-600 group">
+        <a className="hidden md:flex xl:flex-start w-[400px]  items-center justify-center  xl:justify-start text-[20px] text-gray-400 cursor-pointer hover:text-gray-600 group">
           Download my CV -{" "}
           <IoSchool
             className="ml-2 text-gray-400 group-hover:text-gray-600"

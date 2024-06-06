@@ -38,7 +38,7 @@ export default function Home() {
             width={600}
             height={600}
             alt="Apresentation image"
-            className="h-auto w-auto "
+            className="h-auto w-auto"
           />
         </div>
       </main>
