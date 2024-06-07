@@ -37,7 +37,7 @@ export default function Contact() {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className=" flex flex-col gap-8 w-[90%] sm:w-[600px] text-white text-opacity-40"
+          className=" flex flex-col gap-4 md:gap-8 w-[90%] sm:w-[600px] text-white text-opacity-40"
         >
           <div className="flex w-full gap-x-6">
             <input
