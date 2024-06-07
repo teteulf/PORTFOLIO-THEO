@@ -10,7 +10,7 @@ export default function Home() {
       <main className="relative h-full w-full flex items-center justify-center text-white">
         <ParticlesComponent id="particles" />
         <section className="flex items-center justify-center xl:mt-[5%] xl:-ml-[38%]">
-          <div className="flex flex-col w-[100%] md:w-[390px] text-center xl:text-left">
+          <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
             <h1 className="text-[25px] md:text-[40px]">
               Transforming ideas into
               <strong className="text-red-600"> Digital reality</strong>

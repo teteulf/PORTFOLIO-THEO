@@ -21,7 +21,7 @@ export default function Menu() {
     >
       <div
         className="flex w-full xl:flex-col items-center justify-between opacity-4
-      xl:justify-center gap-y-6 px-4 md:px-40 xl:px-4 text-white xl:w-[50px] h-[50px] 
+      xl:justify-center gap-y-6 px-4 md:px-40 xl:px-4 text-white xl:w-[50px] h-[50px] xl:h-auto
       py-8 xl:py-4 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full"
       >
         {navData.map((link, index) => {
