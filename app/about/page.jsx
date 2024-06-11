@@ -22,7 +22,7 @@ export default function About() {
         <h1 className=" text-[30px] md:text-[50px] xl:text-[60px] text-white font-bold">
           Captivating <strong className="text-red-600">stories</strong>.
         </h1>
-        <p className="w-[80%] max-w-[550px] xl:max-w-[100%] xl:w-[550px] opacity-50 text-white text-[14px]">
+        <p className=" leading-8 md:leading-normal w-[80%] max-w-[550px] xl:max-w-[100%] xl:w-[550px] opacity-50 text-white text-[14px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
           enim voluptate perferendis. Illum recusandae perferendis officiis
           autem maxime repellat delectus labore sequi. Veniam repellendus cumque

@@ -14,12 +14,13 @@ import "swiper/css/scrollbar";
 
 export default function Projects() {
   return (
-    <main className="text-white flex w-full h-full items-center justify-center">
-      <section className="flex flex-col items-center flex-initial mt-0 w-[550px]">
-        <h1 className="font-bold text-[45px]">
-          My Projects<strong className="text-[45px] text-red-600">.</strong>
+    <main className="text-white flex flex-col gap-16 md:gap-0 md:flex-row w-full h-full items-center justify-center">
+      <section className="flex flex-col items-center flex-initial md:w-[550px]">
+        <h1 className="font-bold text-[35px] md:text-[45px]">
+          My Projects
+          <strong className="text-[20px] md:text-[45px] text-red-600">.</strong>
         </h1>
-        <p className="">
+        <p className=" opacity-50 text-center leading-8 md:leading-normal md:text-left text-[14px] w-[80%] md:w-[400px]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
           voluptatibus omnis corrupti quia accusantium error magni distinctio
           eos, rerum explicabo labore eveniet beatae, minima magnam, pariatur
@@ -33,17 +34,17 @@ export default function Projects() {
           slidesPerView={1}
           pagination={{ clickable: true }}
           navigation
-          className="w-[380px] flex items-center justify-center"
-          id="swiper "
+          className="w-[250px] h-[300px] md:h-auto md:w-[380px] flex items-center justify-center"
+          id="swiper"
         >
           <SwiperSlide>
-            <div className="bg-[#24246046] hover:bg-[#40409646] rounded-lg h-[350px] w-[250px] relative flex flex-col ml-16  items-start justify-center cursor-pointer group">
+            <div className="bg-[#1e1e4746] hover:bg-[#40409646] rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px] relative flex flex-col ml-[28px] md:ml-16 items-center md:items-start justify-center cursor-pointer group">
               <Link
                 href="https://api-movies-git-main-teteulfs-projects.vercel.app/"
                 target="_blank"
                 className=""
               >
-                <div className="flex flex-col gap-16 -mt-12">
+                <div className="flex flex-col gap-8 md:gap-16 md:-mt-12">
                   <h1 className="ml-12 flex items-center gap-2">
                     <BiCameraMovie size={30} className="text-red-600" /> Movie
                     Api
@@ -51,7 +52,7 @@ export default function Projects() {
                   <p className="opacity-20 text-[14px] ml-12 flex w-[160px]">
                     Find ANY movie existent, and the informations about
                   </p>
-                  <div className="absolute w-[100px] h-[205px] right-2 opacity-60 -bottom-[100px] group-hover:bottom-[-50px] transition-all duration-500">
+                  <div className="absolute invisible md:visible w-[100px] h-[205px] right-2 opacity-60 -bottom-[100px] group-hover:bottom-[-50px] transition-all duration-500">
                     <Image
                       src={"/ApiProject.png"}
                       fill
@@ -70,10 +71,10 @@ export default function Projects() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-16 rounded-lg h-[350px] w-[250px]  "></div>
+            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-16 rounded-lg h-[350px] w-[250px] "></div>
+            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px] "></div>
           </SwiperSlide>
         </Swiper>
       </section>

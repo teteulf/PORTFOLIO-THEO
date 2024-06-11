@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HeaderLayout() {
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 flex flex-col max-w-[100vw] xl:flex-row justify-center items-center md:gap-[35%] z-10">
+      <div className="fixed top-0 left-0 right-0 flex flex-col max-w-[100vw] xl:flex-row justify-center items-center gap-4 md:gap-[35%] z-10">
         <div className="flex text-[30px] md:text-[40px] text-gray-200 mt:2 xl:mt-4">
           <Image src={"/NameLogo.png"} height={200} width={200} />
         </div>
