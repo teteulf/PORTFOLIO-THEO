@@ -71,10 +71,10 @@ export default function Projects() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
+            <div className="bg-[#40409646] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] "></div>
+            <div className="bg-[#40409646] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] "></div>
           </SwiperSlide>
         </Swiper>
       </section>

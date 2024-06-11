@@ -9,7 +9,7 @@ export default function Home() {
         <ParticlesComponent id="particles" />
         <section className="flex items-center justify-center xl:mt-[5%] xl:-ml-[38%]">
           <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
-            <h1 className="text-[25px] md:text-[40px]">
+            <h1 className="text-[25px] md:text-[40px] leading-tight">
               Transforming ideas into
               <strong className="text-red-600"> Digital reality</strong>
             </h1>
@@ -35,13 +35,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="fixed bottom-0 xl:right-[4%] invisible xl:visible">
+        <div className="fixed flex-grow bottom-0 xl:right-[4%] invisible xl:visible">
           <Image
             src={"/i.png"}
             width={600}
             height={600}
             alt="Apresentation image"
-            className="h-auto w-auto"
+            className="w-[47vw]" // Ajuste conforme necessário
           />
         </div>
       </main>
