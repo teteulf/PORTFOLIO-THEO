@@ -16,9 +16,9 @@ export default function Projects() {
   return (
     <main className="text-white flex flex-col gap-4 md:gap-0 md:flex-row w-full h-full items-center justify-center">
       <section className="flex flex-col items-center flex-initial md:w-[550px]">
-        <h1 className="font-bold text-[35px] md:text-[45px]">
+        <h1 className="font-bold text-[25px] md:text-[45px]">
           My Projects
-          <strong className="text-[20px] md:text-[45px] text-red-600">.</strong>
+          <strong className="text-[25px] md:text-[45px] text-red-600">.</strong>
         </h1>
         <p className=" opacity-50 text-center leading-6 md:leading-normal md:text-left text-[14px] w-[80%] md:w-[400px]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
@@ -34,11 +34,11 @@ export default function Projects() {
           slidesPerView={1}
           pagination={{ clickable: true }}
           navigation
-          className="w-[250px] h-[300px] md:h-auto md:w-[380px] flex items-center justify-center"
+          className="w-[250px] h-[260px] md:h-auto md:w-[380px] flex items-center justify-center"
           id="swiper"
         >
           <SwiperSlide>
-            <div className="bg-[#1e1e4746] hover:bg-[#40409646] rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px] relative flex flex-col ml-[28px] md:ml-16 items-center md:items-start justify-center cursor-pointer group">
+            <div className="bg-[#1e1e4746] hover:bg-[#40409646] rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] relative flex flex-col ml-[28px] md:ml-16 items-center md:items-start justify-center cursor-pointer group">
               <Link
                 href="https://api-movies-git-main-teteulfs-projects.vercel.app/"
                 target="_blank"
@@ -71,10 +71,10 @@ export default function Projects() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
+            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[250px] md:h-[350px] w-[200px] md:w-[250px] "></div>
+            <div className="bg-[#2d2d78] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] "></div>
           </SwiperSlide>
         </Swiper>
       </section>

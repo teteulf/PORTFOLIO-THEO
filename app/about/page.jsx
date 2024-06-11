@@ -17,7 +17,7 @@ const aboutData = [
 export default function About() {
   const [index, setIndex] = useState(0);
   return (
-    <main className="flex flex-col xl:flex-row w-full h-full items-center justify-center gap-12 ">
+    <main className="flex flex-col xl:flex-row w-full h-full items-center justify-center gap-4 md:gap-16 ">
       <section className="flex flex-col items-center justify-center text-center xl:text-left">
         <h1 className=" text-[30px] md:text-[50px] xl:text-[60px] text-white font-bold">
           Captivating <strong className="text-red-600">stories</strong>.
