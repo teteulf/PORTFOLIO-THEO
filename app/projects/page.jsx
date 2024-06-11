@@ -14,13 +14,13 @@ import "swiper/css/scrollbar";
 
 export default function Projects() {
   return (
-    <main className="text-white flex flex-col gap-16 md:gap-0 md:flex-row w-full h-full items-center justify-center">
+    <main className="text-white flex flex-col gap-4 md:gap-0 md:flex-row w-full h-full items-center justify-center">
       <section className="flex flex-col items-center flex-initial md:w-[550px]">
         <h1 className="font-bold text-[35px] md:text-[45px]">
           My Projects
           <strong className="text-[20px] md:text-[45px] text-red-600">.</strong>
         </h1>
-        <p className=" opacity-50 text-center leading-8 md:leading-normal md:text-left text-[14px] w-[80%] md:w-[400px]">
+        <p className=" opacity-50 text-center leading-6 md:leading-normal md:text-left text-[14px] w-[80%] md:w-[400px]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
           voluptatibus omnis corrupti quia accusantium error magni distinctio
           eos, rerum explicabo labore eveniet beatae, minima magnam, pariatur
