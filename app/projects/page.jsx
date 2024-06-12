@@ -6,13 +6,14 @@ import { BiCameraMovie } from "react-icons/bi";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { useTransition } from "../context/transitionContext";
+import { useLayoutEffect } from "react";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useTransition } from "../context/transitionContext";
-import { useLayoutEffect } from "react";
 
 export default function Projects() {
   const { setIsOpen } = useTransition();
@@ -21,7 +22,12 @@ export default function Projects() {
   }, []);
   return (
     <main className="text-white flex flex-col gap-4 md:gap-0 md:flex-row w-full h-full items-center justify-center">
-      <section className="flex flex-col items-center flex-initial md:w-[550px]">
+      <motion.section
+        className="flex flex-col items-center flex-initial md:w-[550px]"
+        initial={{ x: "-50%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0, duration: 2 }}
+      >
         <h1 className="font-bold text-[25px] md:text-[45px]">
           My Projects
           <strong className="text-[25px] md:text-[45px] text-red-600">.</strong>
@@ -32,9 +38,13 @@ export default function Projects() {
           eos, rerum explicabo labore eveniet beatae, minima magnam, pariatur
           impedit ullam velit veniam.
         </p>
-      </section>
+      </motion.section>
 
-      <section className="">
+      <motion.section
+        initial={{ x: "50%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0, duration: 2 }}
+      >
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}
           slidesPerView={1}
@@ -83,7 +93,7 @@ export default function Projects() {
             <div className="bg-[#40409646] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] "></div>
           </SwiperSlide>
         </Swiper>
-      </section>
+      </motion.section>
     </main>
   );
 }

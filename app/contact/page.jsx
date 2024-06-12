@@ -3,6 +3,7 @@
 import emailjs from "@emailjs/browser";
 import { useLayoutEffect, useRef } from "react";
 import { useTransition } from "../context/transitionContext";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const form = useRef();
@@ -37,13 +38,21 @@ export default function Contact() {
   return (
     <>
       <section className="h-full w-full flex flex-col items-center justify-center gap-8">
-        <h1 className="text-[40px] text-white">
+        <motion.h1
+          className="text-[40px] text-white"
+          initial={{ y: "-150%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0, duration: 1 }}
+        >
           Lets <strong className="text-red-600">Connect</strong>
-        </h1>
-        <form
+        </motion.h1>
+        <motion.form
           ref={form}
           onSubmit={sendEmail}
           className=" flex flex-col gap-4 md:gap-8 w-[90%] sm:w-[600px] text-white text-opacity-40"
+          initial={{ y: "150%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0, duration: 2 }}
         >
           <div className="flex w-full gap-x-6">
             <input
@@ -84,7 +93,7 @@ export default function Contact() {
           >
             Enviar
           </button>
-        </form>
+        </motion.form>
       </section>
     </>
   );

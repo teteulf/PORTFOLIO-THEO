@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className="bg-[#0c0c20]">
+    <html lang="pt-br" className="bg-[#0c0c20] overflow-hidden">
       <head></head>
       <body className={`${inter.className} h-full w-full`}>
         <TransitionProvider>
