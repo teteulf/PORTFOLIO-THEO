@@ -34,6 +34,7 @@ textarea {
 
 #swiper {
     --swiper-pagination-color: red;
+    --swiper-button-next-color: red;
 }
 
 .swiper-paginação-vertical {
@@ -44,6 +45,7 @@ textarea {
 .swiper-button-next,
 .swiper-button-prev {
     visibility: hidden;
+    color: red;
 }
 
 @media (min-width: 768px) {

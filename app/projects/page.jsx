@@ -11,8 +11,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useTransition } from "../context/transitionContext";
+import { useLayoutEffect } from "react";
 
 export default function Projects() {
+  const { setIsOpen } = useTransition();
+  useLayoutEffect(() => {
+    setIsOpen(false);
+  }, []);
   return (
     <main className="text-white flex flex-col gap-4 md:gap-0 md:flex-row w-full h-full items-center justify-center">
       <section className="flex flex-col items-center flex-initial md:w-[550px]">

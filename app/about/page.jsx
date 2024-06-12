@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { IoSchool } from "react-icons/io5";
 import {
   AboutInfo,
   EducationInfo,
   ExperienceInfo,
 } from "../components/aboutInfo";
+import { useTransition } from "../context/transitionContext";
+import { motion } from "framer-motion";
 
 const aboutData = [
   { name: "skills", info: <AboutInfo /> },
@@ -16,9 +18,18 @@ const aboutData = [
 
 export default function About() {
   const [index, setIndex] = useState(0);
+  const { setIsOpen } = useTransition();
+  useLayoutEffect(() => {
+    setIsOpen(false);
+  }, []);
   return (
     <main className="flex flex-col xl:flex-row w-full h-full items-center justify-center gap-4 md:gap-16 ">
-      <section className="flex flex-col items-center justify-center text-center xl:text-left">
+      <motion.section
+        className="flex flex-col items-center justify-center text-center xl:text-left"
+        initial={{ x: "-50%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0, duration: 2 }}
+      >
         <h1 className=" text-[30px] md:text-[50px] xl:text-[60px] text-white font-bold">
           Captivating <strong className="text-red-600">stories</strong>.
         </h1>
@@ -54,8 +65,13 @@ export default function About() {
             </p>
           </div>
         </div>
-      </section>
-      <section className="flex flex-col items-center xl:items-start justify-center relative gap-8 xl:min-w-[412px]">
+      </motion.section>
+      <motion.section
+        className="flex flex-col items-center xl:items-start justify-center relative gap-8 xl:min-w-[412px]"
+        initial={{ x: "50%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0, duration: 2 }}
+      >
         <div className="flex gap-4 xl:gap-12">
           {aboutData.map((item, itemIndex) => (
             <div
@@ -86,7 +102,7 @@ export default function About() {
             size={30}
           />{" "}
         </a>
-      </section>
+      </motion.section>
     </main>
   );
 }

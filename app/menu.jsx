@@ -1,7 +1,7 @@
 "use client";
 import { HiUser, HiHome, HiEnvelope, HiViewColumns } from "react-icons/hi2";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useTransition } from "./context/transitionContext";
 
 const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
@@ -11,12 +11,15 @@ const navData = [
 ];
 
 export default function Menu() {
+  const { setIsOpen } = useTransition();
+  const route = useRouter();
+
   const pathname = usePathname();
   return (
     <nav
       className="flex flex-col items-center
       xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto
-       xl:right-[2%] z-50 top-0 xl:w-16 
+       xl:right-[2%] z-10 top-0 xl:w-16 
       xl:max-w-md xl:h-screen w-full"
     >
       <div
@@ -26,8 +29,13 @@ export default function Menu() {
       >
         {navData.map((link, index) => {
           return (
-            <Link
-              href={link.path}
+            <span
+              onClick={() => {
+                setIsOpen(true);
+                setTimeout(() => {
+                  route.push(link.path);
+                }, 2200);
+              }}
               rel="preload"
               className={`${
                 link.path === pathname && "text-red-600"
@@ -47,7 +55,7 @@ export default function Menu() {
                 border-y-transparent border-y-[6px] border-r-0 absolute right-[103%] xl:group-hover:flex"
                 ></div>
               </div>
-            </Link>
+            </span>
           );
         })}
       </div>

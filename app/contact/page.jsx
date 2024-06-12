@@ -1,7 +1,8 @@
 "use client";
 
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
+import { useTransition } from "../context/transitionContext";
 
 export default function Contact() {
   const form = useRef();
@@ -27,6 +28,11 @@ export default function Contact() {
         }
       );
   }
+
+  const { setIsOpen } = useTransition();
+  useLayoutEffect(() => {
+    setIsOpen(false);
+  }, []);
 
   return (
     <>

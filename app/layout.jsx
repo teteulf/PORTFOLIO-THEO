@@ -4,6 +4,8 @@ import HeaderLayout from "./header";
 import Menu from "./menu";
 import TopLeftImg from "./components/topLeftImg";
 import BottomRightImg from "./components/bottomRightImg";
+import { TransitionProvider } from "./context/transitionContext";
+import TransitionPages from "./components/transitionAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +19,14 @@ export default function RootLayout({ children }) {
     <html lang="pt-br" className="bg-[#0c0c20]">
       <head></head>
       <body className={`${inter.className} h-full w-full`}>
-        <HeaderLayout />
-        <TopLeftImg />
-        <BottomRightImg />
-        <Menu />
-        {children}
+        <TransitionProvider>
+          <HeaderLayout />
+          <TopLeftImg />
+          <BottomRightImg />
+          <Menu />
+          <TransitionPages />
+          {children}
+        </TransitionProvider>
       </body>
     </html>
   );
