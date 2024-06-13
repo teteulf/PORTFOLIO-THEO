@@ -7,7 +7,7 @@ const TransitionContext = createContext();
 
 export const TransitionProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("En");
 
   const variants = {
     initial: { opacity: 0 },

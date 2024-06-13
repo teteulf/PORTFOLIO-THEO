@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <>
+      <ParticlesComponent id="particles" />
       <main className="relative h-full w-full flex items-center justify-center text-white">
-        <ParticlesComponent id="particles" />
         <motion.section
           className="flex items-center justify-center xl:mt-[5%] xl:-ml-[38%]"
           initial={{ x: "-50%", opacity: 0 }}
@@ -38,6 +38,7 @@ export default function Home() {
                 key={uuidv4()}
                 initial="initial"
                 animate="animate"
+                exit="exit"
                 transition="transition"
                 variants={variants}
               >
