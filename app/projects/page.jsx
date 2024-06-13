@@ -58,14 +58,13 @@ export default function Projects() {
               <Link
                 href="https://api-movies-git-main-teteulfs-projects.vercel.app/"
                 target="_blank"
-                className=""
               >
                 <div className="flex flex-col gap-8 md:gap-16 md:-mt-12">
                   <h1 className="ml-12 flex items-center gap-2">
                     <BiCameraMovie size={30} className="text-red-600" /> Movie
                     Api
                   </h1>
-                  <p className="opacity-20 text-[14px] ml-12 flex w-[160px]">
+                  <p className="opacity-20 text-[14px] ml-12 flex w-[90px] md:w-[160px]">
                     Find ANY movie existent, and the informations about
                   </p>
                   <div className="absolute invisible md:visible w-[100px] h-[205px] right-2 opacity-60 -bottom-[100px] group-hover:bottom-[-50px] transition-all duration-500">
