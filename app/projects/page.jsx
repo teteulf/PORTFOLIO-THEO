@@ -43,7 +43,7 @@ export default function Projects() {
       <motion.section
         initial={{ x: "50%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0, duration: 2 }}
+        transition={{ delay: 0, duration: 1 }}
       >
         <Swiper
           modules={[Navigation, Pagination, Scrollbar]}

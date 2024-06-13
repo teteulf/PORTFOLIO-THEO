@@ -22,7 +22,7 @@ export default function Home() {
           initial={{ x: "-50%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "-50%", opacity: 0 }}
-          transition={{ delay: 0, duration: 2 }}
+          transition={{ delay: 0, duration: 1.5 }}
         >
           <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
             <h1 className="text-[25px] md:text-[40px] leading-tight">

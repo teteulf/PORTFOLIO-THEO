@@ -70,7 +70,7 @@ export default function About() {
         className="flex flex-col items-center xl:items-start justify-center relative gap-8 xl:min-w-[412px]"
         initial={{ x: "50%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0, duration: 2 }}
+        transition={{ delay: 0, duration: 1 }}
       >
         <div className="flex gap-4 xl:gap-12">
           {aboutData.map((item, itemIndex) => (

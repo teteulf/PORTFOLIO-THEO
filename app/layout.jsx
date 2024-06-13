@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
 import HeaderLayout from "./header";
 import Menu from "./menu";
@@ -7,7 +7,7 @@ import BottomRightImg from "./components/bottomRightImg";
 import { TransitionProvider } from "./context/transitionContext";
 import TransitionPages from "./components/transitionAnimation";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Rethink_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
