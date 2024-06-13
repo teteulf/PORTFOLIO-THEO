@@ -4,13 +4,14 @@ import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ParticlesComponent from "./components/particles";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLayoutEffect, useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useTransition } from "./context/transitionContext";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid"; // Importando uuidv4
 
 export default function Home() {
-  const { setIsOpen } = useTransition();
-  const { language, setLanguage } = useTransition();
+  const { setIsOpen, language, variants } = useTransition();
+
   useLayoutEffect(() => {
     setIsOpen(false);
   }, []);
@@ -27,18 +28,36 @@ export default function Home() {
           transition={{ delay: 0, duration: 1.5 }}
         >
           <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
-            <h1 className="text-[25px] md:text-[40px] leading-tight">
-              Transforming ideas into
-              <strong className="text-red-600"> Digital reality</strong>
-            </h1>
             <AnimatePresence mode="wait">
+              <motion.h1
+                className={`leading-tight${
+                  language === "En"
+                    ? "text-[25px] md:text-[40px]"
+                    : "text-[25px] md:text-[35px]"
+                }`}
+                key={uuidv4()}
+                initial="initial"
+                animate="animate"
+                transition="transition"
+                variants={variants}
+              >
+                {language === "En"
+                  ? "Transforming ideas into"
+                  : "Transformando ideias em"}
+                <strong className="text-red-600">
+                  {language === "En"
+                    ? " Digital reality"
+                    : " Realidade digital"}
+                </strong>
+              </motion.h1>
+
               <motion.p
-                className="opacity-70"
-                key={language}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.7 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
+                key={uuidv4()}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition="transition"
+                variants={variants}
               >
                 {language === "En"
                   ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore velit accusantium error maxime praesentium optio ex cum quia voluptatem mollitia delectus aut itaque in exercitationem dolores eum nesciunt corrupti."

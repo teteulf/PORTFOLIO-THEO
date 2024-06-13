@@ -11,7 +11,7 @@ export default function HeaderLayout() {
   const { language, setLanguage } = useTransition();
   return (
     <>
-      <div className="mt-4 fixed top-0 left-0 right-0 flex flex-col-reverse max-w-[100vw] xl:flex-row justify-center items-center md:gap-[15%] z-10">
+      <div className="mt-4 md:mt-0 fixed top-0 left-0 right-0 flex flex-col-reverse max-w-[100vw] xl:flex-row justify-center items-center md:gap-[15%] z-10">
         <div className="hidden md:flex text-[30px] md:text-[40px] text-gray-200 mt:2 xl:mt-4">
           <Image src={"/NameLogo.png"} height={200} width={200} />
         </div>
