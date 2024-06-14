@@ -42,25 +42,25 @@ export default function About() {
         <div className="mt-10 xl:mt-20 items-center hidden  md:flex  md:gap-6">
           <div className="flex flex-col justify-center border-r-[0.5px] border-gray-500 border-opacity-50 xl:max-w-[130px] max-h-[110px] md:pr-10">
             <div className="text-[35px] text-red-600 font-extrabold">10+</div>
-            <p className="text-white max-w-[100px] uppercase text-xs tracking-[1px] leading-[1.4]">
+            <p className="text-white text-[10px] max-w-[100px] uppercase tracking-[1px] leading-[1.4]">
               technologies that I work
             </p>
           </div>
           <div className="flex flex-col justify-center border-r-[0.5px] border-gray-500 border-opacity-50 xl:max-w-[130px] max-h-[110px] md:pr-10">
             <div className="text-[35px] text-red-600 font-extrabold">15+</div>
-            <p className="text-white max-w-[100px] uppercase text-xs tracking-[1px] leading-[1.4]">
+            <p className="text-white max-w-[100px] uppercase text-[10px] tracking-[1px] leading-[1.4]">
               course certificates
             </p>
           </div>
           <div className="flex flex-col justify-center border-r-[0.5px] border-gray-500 border-opacity-50 xl:max-w-[130px] max-h-[110px] md:pr-10">
             <div className="text-[35px] text-red-600 font-extrabold">150+</div>
-            <p className="text-white max-w-[100px] uppercase text-xs tracking-[1px] leading-[1.4]">
+            <p className="text-white max-w-[100px] uppercase text-[10px] tracking-[1px] leading-[1.4]">
               hours of course
             </p>
           </div>
           <div className="flex flex-col justify-center xl:max-w-[130px] max-h-[110px]">
             <div className="text-[35px] text-red-600 font-extrabold">4+</div>
-            <p className="text-white max-w-[100px] uppercase text-xs tracking-[1px] leading-[1.4]">
+            <p className="text-white max-w-[100px] uppercase text-[10px] tracking-[1px] leading-[1.4]">
               projects completed
             </p>
           </div>

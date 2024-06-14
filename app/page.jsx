@@ -7,10 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLayoutEffect } from "react";
 import { useTransition } from "./context/transitionContext";
 import Link from "next/link";
-import { v4 as uuidv4 } from "uuid"; // Importando uuidv4
+import { v4 as uuidv4 } from "uuid";
 
 export default function Home() {
   const { setIsOpen, language, variants } = useTransition();
+  console.log(uuidv4);
 
   useLayoutEffect(() => {
     setIsOpen(false);
@@ -39,8 +40,8 @@ export default function Home() {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition="transition"
                 variants={variants}
+                transition={{ duration: 1.1 }}
               >
                 {language === "En"
                   ? "Transforming ideas into"
@@ -57,47 +58,64 @@ export default function Home() {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition="transition"
                 variants={variants}
+                transition={{ duration: 1.1 }}
               >
                 {language === "En"
-                  ? "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur inventore velit accusantium error maxime praesentium optio ex cum quia voluptatem mollitia delectus aut itaque in exercitationem dolores eum nesciunt corrupti."
-                  : "Teste em para ver se esta funcionando ou nao a linguagem, tlgd meu brother."}
+                  ? "With a solid technical knowledge and a creative vision, I am committed to developing innovative solutions that not only work, but also provide an exceptional user experience."
+                  : "Com um sólido conhecimento técnico e uma visão criativa, estou comprometido em desenvolver soluções inovadoras que não apenas funcionem , mas também proporcionem uma experiência excepcional ao usuário."}
               </motion.p>
             </AnimatePresence>
-            <div className="relative flex items-center justify-center ">
-              <div className="animate-spin-slow min-w-[150px]">
-                <Image
-                  src={"/projects.png"}
-                  width={150}
-                  height={150}
-                  alt="project link"
-                />
-              </div>
-              <div className="absolute hover:translate-x-4 transition duration-1000 cursor-pointer min-w-[35px]">
-                <Link href="/projects">
-                  <FaArrowRightLong color="red" size={35} />
-                </Link>
-              </div>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                className="relative flex items-center justify-center "
+                key={uuidv4()}
+                initial="initial"
+                animate="animate"
+                exit={{ opacity: 0 }}
+                variants={variants}
+                transition={{ duration: 1.1 }}
+              >
+                <div className="animate-spin-slow min-w-[150px]">
+                  <Image
+                    src={"/projects.png"}
+                    width={150}
+                    height={150}
+                    alt="project link"
+                  />
+                </div>
+                <div className="absolute hover:translate-x-4 transition duration-1000 cursor-pointer min-w-[35px]">
+                  <Link href="/projects">
+                    <FaArrowRightLong color="red" size={35} />
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </motion.section>
-
-        <motion.div
-          className="fixed flex-grow bottom-0 xl:right-[4%] invisible xl:visible"
-          initial={{ x: "50vw", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "200vw", opacity: 0 }}
-          transition={{ delay: 0, duration: 1 }}
-        >
-          <Image
-            src={"/i.png"}
-            width={600}
-            height={600}
-            alt="Apresentation image"
-            className="w-[47vw]"
-          />
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={uuidv4()}
+            className="fixed flex-grow bottom-0 xl:right-[4%] invisible xl:visible"
+            initial={{ x: "10vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{
+              x: "10vw",
+              opacity: 0,
+              transition: { duration: 1 },
+            }}
+            transition={{ delay: 0, duration: 1 }}
+          >
+            <Image
+              src={"/i.png"}
+              width={600}
+              height={600}
+              alt="Apresentation image"
+              className="w-[47vw]"
+              priority
+            />
+          </motion.div>
+        </AnimatePresence>
       </main>
     </>
   );
