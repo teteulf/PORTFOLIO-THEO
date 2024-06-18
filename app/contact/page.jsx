@@ -48,29 +48,21 @@ export default function Contact() {
   return (
     <>
       <section className="h-full w-full flex flex-col items-center justify-center gap-8">
-        <motion.h1
-          className="text-[40px] text-white"
-          initial={{ y: "-150%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0, duration: 2 }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={uuidv4()}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={variants}
-              transition={{ duration: 1 }}
-            >
-              {language === "En" ? "Lets" : "Fale"}
-              <strong className="text-red-600">
-                {language === "En" ? " Connect" : " Comigo"}
-              </strong>
-            </motion.div>
-          </AnimatePresence>
-        </motion.h1>
         <AnimatePresence mode="wait">
+          <motion.h1
+            key={uuidv4()}
+            className="text-[40px] text-white"
+            initial={{ y: "-150%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-150%", opacity: 0 }}
+            transition={{ delay: 0, duration: 2 }}
+          >
+            {language === "En" ? "Lets" : "Fale"}
+            <strong className="text-red-600">
+              {language === "En" ? " Connect" : " Comigo"}
+            </strong>
+          </motion.h1>
+
           <motion.form
             ref={form}
             key={uuidv4()}

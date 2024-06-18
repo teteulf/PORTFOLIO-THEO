@@ -13,7 +13,6 @@ const navData = [
 export default function Menu() {
   const { setIsOpen } = useTransition();
   const route = useRouter();
-
   const pathname = usePathname();
   return (
     <nav

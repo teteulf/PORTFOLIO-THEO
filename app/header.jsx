@@ -5,7 +5,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { RiDiscordLine } from "react-icons/ri";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { useTransition } from "./context/transitionContext";
-import Image from "next/image";
 
 export default function HeaderLayout() {
   const { language, setLanguage } = useTransition();

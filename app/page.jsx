@@ -72,7 +72,7 @@ export default function Home() {
                 key={uuidv4()}
                 initial="initial"
                 animate="animate"
-                exit={{ opacity: 0 }}
+                exit="exit"
                 variants={variants}
                 transition={{ duration: 1.1 }}
               >
