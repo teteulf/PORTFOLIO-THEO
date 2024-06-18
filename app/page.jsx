@@ -31,10 +31,8 @@ export default function Home() {
           <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
             <AnimatePresence mode="wait">
               <motion.h1
-                className={`leading-tight${
-                  language === "En"
-                    ? "text-[25px] md:text-[40px]"
-                    : "text-[25px] md:text-[35px]"
+                className={`leading-tight text-[25px]${
+                  language === "En" ? " md:text-[40px]" : " md:text-[35px]"
                 }`}
                 key={uuidv4()}
                 initial="initial"

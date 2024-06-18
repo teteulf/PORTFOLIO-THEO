@@ -8,6 +8,7 @@ import {
   ExperienceInfo,
 } from "../components/aboutInfo";
 import { useTransition } from "../context/transitionContext";
+import { uuid } from "uuidv4";
 import { AnimatePresence, motion } from "framer-motion";
 
 const aboutData = [
@@ -38,17 +39,22 @@ export default function About() {
           key={key2}
           className="flex flex-col items-center justify-center text-center xl:text-left"
           initial={{ x: "-10%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          animate={{ x: 0, opacity: 0.7 }}
           exit={{ x: "-10%", opacity: 0 }}
           transition={{ delay: 0, duration: 2 }}
         >
           <h1 className=" text-[30px] md:text-[50px] xl:text-[60px] text-white font-bold">
-            Captivating <strong className="text-red-600">stories</strong>.
+            {language === "En" ? "Creative" : "Códigos"}{" "}
+            <strong className="text-red-600">
+              {" "}
+              {language === "En" ? "codes" : "criativos"}
+            </strong>
+            .
           </h1>
           <p className=" leading-8 md:leading-normal w-[80%] max-w-[550px] xl:max-w-[100%] xl:w-[550px] opacity-50 text-white text-[14px]">
             {language === "Pt"
-              ? "Olá, meu nome é Theo. Tenho 23 anos e há pouco mais de um ano comecei minha jornada no mundo da programação. Desde então, essa paixão tem crescido a cada linha de código que escrevo. Encontrei na programação uma forma de combinar lógica, criatividade e uma vontade incessante de sempre aprender!"
-              : "Hi, my name is Theo. I am 23 years old and just over a year ago, I began my journey into the world of programming. Since then, this passion has grown with every line of code I write. I have found in programming a way to combine logic, creativity, and an insatiable desire to always learn!"}
+              ? "Olá, meu nome é Theo. Tenho 23 anos e, há pouco mais de um ano, iniciei minha jornada no mundo da programação. Desde então, minha paixão tem crescido a cada linha de código. Encontrei na programação uma forma de combinar lógica, criatividade e uma vontade incessante de sempre aprender!"
+              : "Hello, my name is Theo. I'm 23 years old and, just over a year ago, I began my journey into the world of programming. Since then, my passion has grown with every line of code. I have found in programming a way to combine logic, creativity, and an insatiable desire to always learn!"}
           </p>
           <div className="mt-10 xl:mt-20 items-center hidden  md:flex  md:gap-6">
             <div className="flex flex-col justify-center border-r-[0.5px] border-gray-500 border-opacity-50 xl:max-w-[130px] max-h-[110px] md:pr-10">
@@ -112,9 +118,20 @@ export default function About() {
             ))}
           </div>
 
-          <div className="flex text-white relative min-h-[150px] xl:min-w-[300px] ">
-            {aboutData[index].info}
+          <div className="flex text-white relative min-h-[150px] xl:min-w-[300px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={uuid()}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.6 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {aboutData[index].info}
+              </motion.div>
+            </AnimatePresence>
           </div>
+
           <a className="hidden md:flex xl:flex-start w-[400px]  items-center justify-center  xl:justify-start text-[20px] text-gray-400 cursor-pointer hover:text-gray-600 group">
             Download my CV -{" "}
             <IoSchool

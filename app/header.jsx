@@ -12,7 +12,7 @@ export default function HeaderLayout() {
     <>
       <div className="mt-4 md:mt-0 fixed top-0 left-0 right-0 flex flex-col-reverse max-w-[100vw] xl:flex-row justify-center items-center md:gap-[15%] z-10">
         <div className="hidden md:flex text-[30px] md:text-[40px] text-gray-200 mt:2 xl:mt-4">
-          <h1 className="text-[30px]">
+          <h1 className="text-[30px] invisible xl:visible">
             <strong className="tracking-wider">theo</strong> lefevre
             <strong className="text-red-600">.</strong>
           </h1>

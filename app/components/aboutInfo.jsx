@@ -6,20 +6,22 @@ import { SiTailwindcss, SiStyledcomponents, SiFramer } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { uuid } from "uuidv4";
 
 const iconsData = [
-  { icon: <IoLogoJavascript size={25} />, popUp: "JavaScript" },
-  { icon: <IoLogoCss3 size={25} />, popUp: "Css" },
-  { icon: <FaHtml5 size={25} />, popUp: "Html" },
-  { icon: <IoLogoReact size={25} />, popUp: "React , ReactNative" },
-  { icon: <SiTailwindcss size={25} />, popUp: "TailwindCss" },
-  { icon: <SiStyledcomponents size={25} />, popUp: "StyledComponents" },
-  { icon: <FaGithub size={25} />, popUp: "GitHub" },
-  { icon: <FaGitAlt size={25} />, popUp: "Git" },
-  { icon: <FaNodeJs size={25} />, popUp: "NodeJs" },
-  { icon: <SiFramer size={25} />, popUp: "Framer-motion" },
-  { icon: <RiNextjsFill size={25} />, popUp: "NextJs" },
-  { icon: <BiLogoTypescript size={25} />, popUp: "TypeScript" },
+  { icon: <IoLogoJavascript size={20} />, popUp: "JavaScript" },
+  { icon: <IoLogoCss3 size={20} />, popUp: "Css" },
+  { icon: <FaHtml5 size={20} />, popUp: "Html" },
+  { icon: <IoLogoReact size={20} />, popUp: "React , ReactNative" },
+  { icon: <SiTailwindcss size={20} />, popUp: "TailwindCss" },
+  { icon: <SiStyledcomponents size={20} />, popUp: "StyledComponents" },
+  { icon: <FaGithub size={20} />, popUp: "GitHub" },
+  { icon: <FaGitAlt size={20} />, popUp: "Git" },
+  { icon: <FaNodeJs size={20} />, popUp: "NodeJs" },
+  { icon: <SiFramer size={20} />, popUp: "Framer-motion" },
+  { icon: <RiNextjsFill size={20} />, popUp: "NextJs" },
+  { icon: <BiLogoTypescript size={20} />, popUp: "TypeScript" },
 ];
 
 export function AboutInfo() {
@@ -43,8 +45,8 @@ export function AboutInfo() {
                   {item.icon}
                   <div
                     className={`${
-                      itemIndex === index ? "visible" : "hidden"
-                    } absolute bg-white text-black -mt-16 rounded-[4px] px-2 opacity-60`}
+                      itemIndex === index ? "opacity-60" : "opacity-0"
+                    } absolute bg-white text-black -mt-16 rounded-[4px] px-2 transition duration-700`}
                     style={{ whiteSpace: "nowrap" }}
                   >
                     {item.popUp}
@@ -66,8 +68,8 @@ export function AboutInfo() {
                   {item.icon}
                   <div
                     className={`${
-                      itemIndex + 6 === index ? "visible" : "hidden"
-                    } absolute bg-white text-black mt-16 rounded-[4px] px-2 opacity-60`}
+                      itemIndex + 6 === index ? "opacity-60" : "opacity-0"
+                    } absolute bg-white text-black mt-16 rounded-[4px] px-2transition duration-700`}
                     style={{ whiteSpace: "nowrap" }}
                   >
                     {item.popUp}
@@ -80,14 +82,18 @@ export function AboutInfo() {
             </div>
           </div>
         </div>
-        <div></div>
       </div>
     </>
   );
 }
 
 export function EducationInfo() {
-  return <div className="text-[18px]"> aasdasdasdasdasdasdasdasdasdasdas</div>;
+  return (
+    <div className="text-[18px]">
+      {" "}
+      <div> aasdasdasdasdasdasdasdasdasdasdas</div>;
+    </div>
+  );
 }
 
 export function ExperienceInfo() {
