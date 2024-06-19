@@ -23,9 +23,9 @@ export default function Home() {
       <main className="relative h-full w-full flex items-center justify-center text-white">
         <motion.section
           className="flex items-center justify-center xl:mt-[5%] xl:-ml-[38%]"
-          initial={{ x: "-50%", opacity: 0 }}
+          initial={{ x: "-10%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "-50%", opacity: 0 }}
+          exit={{ x: "-10%", opacity: 0 }}
           transition={{ delay: 0, duration: 1.5 }}
         >
           <div className="flex flex-col w-[95%] md:w-[390px] text-center xl:text-left">
@@ -52,6 +52,7 @@ export default function Home() {
               </motion.h1>
 
               <motion.p
+                className="font-extralight text-[16px]"
                 key={uuidv4()}
                 initial="initial"
                 animate="animate"
@@ -100,9 +101,9 @@ export default function Home() {
             exit={{
               x: "10vw",
               opacity: 0,
-              transition: { duration: 1 },
+              transition: { duration: 1.1 },
             }}
-            transition={{ delay: 0, duration: 1 }}
+            transition={{ delay: 0, duration: 1.1 }}
           >
             <Image
               src={"/i.png"}

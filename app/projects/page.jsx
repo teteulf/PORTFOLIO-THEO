@@ -39,10 +39,10 @@ export default function Projects() {
                 .
               </strong>
             </h1>
-            <p className=" opacity-50 text-center leading-6 md:leading-normal md:text-left text-[14px] md:w-[400px]">
+            <p className=" opacity-50 text-center leading-6 md:leading-normal md:text-left text-[14px] md:w-[400px] font-extralight">
               {language === "En"
                 ? "In this section, you will find a selection of my most recent creations. Each project was developed carefully, using the most current and advanced technologies present in the market, in order to ensure modern and efficient solutions."
-                : "Aqui, você encontrará uma seleção das minhas criações mais recentes.  Cada projeto foi cuidadosamente desenvolvido utilizando as tecnologias mais atuais mercado, garantindo soluções modernas e eficientes."}
+                : "Aqui, você encontrará uma seleção das minhas criações mais recentes. Cada projeto foi cuidadosamente desenvolvido utilizando as tecnologias mais atuais mercado, garantindo soluções modernas e eficientes."}
             </p>
           </motion.div>
         </AnimatePresence>
@@ -77,7 +77,7 @@ export default function Projects() {
                     <p className="opacity-20 text-[14px] md:ml-12 flex md:w-[160px] w-[90%] text-center md:text-left">
                       {language === "En"
                         ? "Find ANY movie existent, and the informations about"
-                        : "Encontre QUALQUER filme existente, e as inforamções sobre"}
+                        : "Encontre QUALQUER filme existente, e as informações sobre"}
                     </p>
                     <div className="absolute invisible md:visible w-[100px] h-[205px] right-2 opacity-60 -bottom-[100px] group-hover:bottom-[-50px] transition-all duration-500">
                       <Image

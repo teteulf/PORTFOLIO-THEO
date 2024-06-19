@@ -10,16 +10,30 @@ export const TransitionProvider = ({ children }) => {
   const [language, setLanguage] = useState("En");
   const key = uuid();
   const key2 = uuid();
+  const skillKey = uuid();
+  const educationKey = uuid();
+  const experienceKey = uuid();
 
   const variants = {
-    initial: { opacity: 0, x: "-20%" },
+    initial: { opacity: 0, x: "-10%" },
     animate: { opacity: 0.7, x: 0 },
-    exit: { opacity: 0, x: "-20%" },
+    exit: { opacity: 0, x: "-10%" },
   };
 
   return (
     <TransitionContext.Provider
-      value={{ isOpen, setIsOpen, language, setLanguage, variants, key, key2 }}
+      value={{
+        isOpen,
+        setIsOpen,
+        language,
+        setLanguage,
+        variants,
+        key,
+        key2,
+        skillKey,
+        educationKey,
+        experienceKey,
+      }}
     >
       {children}
     </TransitionContext.Provider>

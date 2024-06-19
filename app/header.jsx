@@ -41,7 +41,7 @@ export default function HeaderLayout() {
           <a>
             <BsInstagram className="cursor-pointer hover:animate-bounce hover:text-red-600" />
           </a>
-          <a>
+          <a href="https://wa.me/5511975231490?text=">
             <FaWhatsapp className="cursor-pointer hover:animate-bounce hover:text-red-600" />
           </a>
           <a>
