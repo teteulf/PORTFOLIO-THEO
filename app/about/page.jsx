@@ -99,7 +99,7 @@ export default function About() {
       </AnimatePresence>
       <AnimatePresence mode="wait">
         <motion.section
-          className="flex flex-col items-center xl:items-start justify-center relative gap-2 xl:min-w-[426px] mt-4 md:mt-8"
+          className="flex flex-col items-center xl:items-start justify-center relative gap-2 xl:min-w-[500px] mt-4 md:mt-8"
           key={key}
           initial={{ x: "10%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
