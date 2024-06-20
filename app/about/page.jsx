@@ -58,8 +58,8 @@ export default function About() {
           </h1>
           <p className=" leading-6 md:leading-normal font-extralight w-[80%] max-w-[550px] xl:max-w-[100%] xl:w-[550px] opacity-50 text-white text-[14px]">
             {language === "Pt"
-              ? "Olá, meu nome é Theo. Tenho 24 anos e, há pouco mais de um ano, iniciei minha jornada no mundo da programação. Desde então, minha paixão tem crescido a cada linha de código. Encontrei na programação uma forma de combinar lógica, criatividade e uma vontade incessante de sempre aprender!"
-              : "Hello, my name is Theo. I'm 24 years old and, just over a year ago, I began my journey into the world of programming. Since then, my passion has grown with every line of code. I have found in programming a way to combine logic, creativity, and an insatiable desire to always learn!"}
+              ? "Há pouco mais de um ano, iniciei minha jornada no mundo da programação. Desde então, minha paixão tem crescido a cada linha de código. Encontrei na programação uma forma de combinar lógica, criatividade e uma vontade incessante de sempre construir novos projetos!"
+              : "Just over a year ago, I began my journey into the world of programming. Since then, my passion has grown with every line of code. I have found in programming a way to combine logic, creativity, and an insatiable desire to always build new projects!"}
           </p>
           <div className="mt-10 xl:mt-20 items-center hidden  md:flex  md:gap-6">
             <div className="flex flex-col justify-center border-r-[0.5px] border-gray-500 border-opacity-50 xl:max-w-[130px] max-h-[110px] md:pr-10">
@@ -91,7 +91,7 @@ export default function About() {
               <p className="text-white max-w-[100px] uppercase text-[10px] tracking-[1px] leading-[1.4]">
                 {language === "En"
                   ? "projects completed"
-                  : "projetos completados"}
+                  : "projetos completos"}
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function About() {
       </AnimatePresence>
       <AnimatePresence mode="wait">
         <motion.section
-          className="flex flex-col items-center xl:items-start justify-center relative gap-2 xl:min-w-[500px] mt-4 md:mt-8"
+          className="flex flex-col items-center xl:items-start justify-center relative gap-2 xl:min-w-[455px] mt-4 md:mt-8"
           key={key}
           initial={{ x: "10%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
