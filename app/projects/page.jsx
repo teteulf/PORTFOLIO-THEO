@@ -17,7 +17,7 @@ function App() {
 
   useLayoutEffect(() => setIsOpen(false), []);
   return (
-    <div className="h-full w-full flex items-center justify-center">
+    <div className="h-full w-full flex items-center justify-center relative">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -37,7 +37,7 @@ function App() {
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="h-[25rem] w-[50%] relative px-0"
+        className="h-[25rem] w-[50%] relative"
       >
         <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
           slide 1
@@ -60,17 +60,18 @@ function App() {
         <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
           slide 7
         </SwiperSlide>
-
+      </Swiper>
+      <div className="flex items-center justify-center absolute w-[60%] h-full">
         <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
+          <div className="swiper-button-prev slider-arrow ">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </div>
-          <div className="swiper-button-next slider-arrow">
+          <div className="swiper-button-next slider-arrow ">
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </div>
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination mb-10"></div>
         </div>
-      </Swiper>
+      </div>
     </div>
   );
 }
