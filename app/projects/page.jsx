@@ -1,111 +1,78 @@
 "use client";
 
-import Image from "next/image";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { BiCameraMovie } from "react-icons/bi";
-import Link from "next/link";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { useTransition } from "../context/transitionContext";
 import { useLayoutEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { uuid } from "uuidv4";
+import { useTransition } from "../context/transitionContext";
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 
-export default function Projects() {
-  const { setIsOpen, language, variants } = useTransition();
-  useLayoutEffect(() => {
-    setIsOpen(false);
-  }, []);
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+
+function App() {
+  const { setIsOpen } = useTransition();
+
+  useLayoutEffect(() => setIsOpen(false), []);
   return (
-    <main className="text-white flex flex-col gap-4 md:gap-0 md:flex-row w-full h-full items-center justify-center">
-      <section className="flex flex-col items-center text-center flex-initial md:w-[550px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={uuid()}
-            initial="initial"
-            exit="exit"
-            animate="animate"
-            variants={variants}
-            transition={{ duration: 1 }}
-          >
-            <h1 className="font-bold text-[25px] md:text-[45px]">
-              {language === "En" ? "My Projects" : "Meus Projetos"}
-              <strong className="text-[25px] md:text-[45px] text-red-600">
-                .
-              </strong>
-            </h1>
-            <p className=" opacity-50 text-center leading-6 md:leading-normal md:text-left text-[14px] md:w-[400px] font-extralight">
-              {language === "En"
-                ? "In this section, you will find a selection of my most recent creations. Each project was developed carefully, using the most current and advanced technologies present in the market, in order to ensure modern and efficient solutions."
-                : "Aqui, você encontrará uma seleção das minhas criações mais recentes. Cada projeto foi cuidadosamente desenvolvido utilizando as tecnologias mais atuais mercado, garantindo soluções modernas e eficientes."}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </section>
-      <AnimatePresence mode="wait">
-        <motion.section
-          key={uuid()}
-          initial={{ x: "15%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "15%", opacity: 0 }}
-          transition={{ delay: 0, duration: 1 }}
-        >
-          <Swiper
-            modules={[Navigation, Pagination]}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            navigation
-            className="w-[250px] h-[260px] md:h-auto md:w-[380px] flex items-center justify-center"
-            id="swiper"
-          >
-            <SwiperSlide>
-              <div className="bg-[#1e1e4746] hover:bg-[#40409646] rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] relative flex flex-col ml-[28px] md:ml-16 items-center md:items-start justify-center cursor-pointer group">
-                <Link
-                  href="https://api-movies-git-main-teteulfs-projects.vercel.app/"
-                  target="_blank"
-                >
-                  <div className="flex flex-col gap-8 md:gap-16 md:-mt-12 items-center justify-center md:items-start md:justify-start">
-                    <h1 className="md:ml-12 flex items-center gap-2">
-                      <BiCameraMovie size={30} className="text-red-600" />{" "}
-                      {language === "En" ? "Movie Api" : "Api de Filmes"}
-                    </h1>
-                    <p className="opacity-20 text-[14px] md:ml-12 flex md:w-[160px] w-[90%] text-center md:text-left">
-                      {language === "En"
-                        ? "Find ANY movie existent, and the informations about"
-                        : "Encontre QUALQUER filme existente, e as informações sobre"}
-                    </p>
-                    <div className="absolute invisible md:visible w-[100px] h-[205px] right-2 opacity-60 -bottom-[100px] group-hover:bottom-[-50px] transition-all duration-500">
-                      <Image
-                        src={"/ApiProject.png"}
-                        fill
-                        priority
-                        objectFit="cover"
-                        sizes="max-inline-size: 100%"
-                      />
-                    </div>
-                    <IoIosArrowRoundForward
-                      size={50}
-                      className="md:ml-10 -rotate-45 group-hover:rotate-[40px] group-hover:text-red-600 transition duration-200"
-                    />
-                  </div>
-                </Link>
-              </div>
-            </SwiperSlide>
+    <div className="h-full w-full flex items-center justify-center">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={2.5}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+        }}
+        pagination={{ el: ".swiper-pagination", clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="h-[25rem] w-[50%] relative px-0"
+      >
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 1
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 2
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 3
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 4
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 5
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 6
+        </SwiperSlide>
+        <SwiperSlide className="w-[37rem] relative bg-[#fff] rounded-xl">
+          slide 7
+        </SwiperSlide>
 
-            <SwiperSlide>
-              <div className="bg-[#40409646] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px]  "></div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-[#40409646] opacity-20 ml-[28px] md:ml-16 rounded-lg h-[220px] md:h-[350px] w-[200px] md:w-[250px] "></div>
-            </SwiperSlide>
-          </Swiper>
-        </motion.section>
-      </AnimatePresence>
-    </main>
+        <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
+      </Swiper>
+    </div>
   );
 }
+
+export default App;

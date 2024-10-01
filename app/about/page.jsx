@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { IoSchool } from "react-icons/io5";
 import { PiCertificate } from "react-icons/pi";
 import {
@@ -10,7 +10,7 @@ import {
 } from "../components/aboutInfo";
 import { useTransition } from "../context/transitionContext";
 import { uuid } from "uuidv4";
-import { AnimatePresence, animate, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const aboutData = [
   {
